@@ -1,3 +1,3 @@
-# HttpClient with ASP.NET Core
-## https://code-maze.com/httpclient-with-asp-net-core-tutorial
-This repo contains the source code for the "HttpClient with ASP.NET Core" series of articles on Code Maze
+# Fetching Data and Content Negotiation with HttpClient in ASP.NET Core
+## https://code-maze.com/fetching-data-with-httpclient-in-aspnetcore
+This repo contains the source code for the "Fetching Data and Content Negotiation with HttpClient in ASP.NET Core" article on Code Maze
