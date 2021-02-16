@@ -1,3 +1,3 @@
-# Fetching Data and Content Negotiation with HttpClient in ASP.NET Core
-## https://code-maze.com/fetching-data-with-httpclient-in-aspnetcore
-This repo contains the source code for the "Fetching Data and Content Negotiation with HttpClient in ASP.NET Core" article on Code Maze
+# POST, PUT and DELETE Requests Using HttpClient in ASP.NET Core
+## https://code-maze.com/httpclient-example-aspnet-core-post-put-delete
+This repo contains the source code for the "POST, PUT and DELETE Requests Using HttpClient in ASP.NET Core" article on Code Maze
