@@ -29,7 +29,9 @@ namespace CompanyEmployees.Client
 		private static void ConfigureServices(IServiceCollection services)
 		{
 			//services.AddScoped<IHttpClientServiceImplementation, HttpClientCrudService>();
-			services.AddScoped<IHttpClientServiceImplementation, HttpClientPatchService>();
+			//services.AddScoped<IHttpClientServiceImplementation, HttpClientPatchService>();
+			services.AddScoped<IHttpClientServiceImplementation, HttpClientStreamService>();
+
 		}
 	}
 }
