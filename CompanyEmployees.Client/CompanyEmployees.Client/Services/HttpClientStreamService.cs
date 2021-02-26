@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -26,8 +27,9 @@ namespace CompanyEmployees.Client.Services
 
 		public async Task Execute()
 		{
-			await GetCompaniesWithStream();
+			//await GetCompaniesWithStream();
 			//await CreateCompanyWithStream();
+			await GetNonExistentCompany();
 		}
 
 		private async Task GetCompaniesWithStream()
@@ -71,6 +73,28 @@ namespace CompanyEmployees.Client.Services
 					var createdCompany = await JsonSerializer.DeserializeAsync<CompanyDto>(content, _options);
 				}	
 			}	
+		}
+
+		private async Task GetNonExistentCompany()
+		{
+			var uri = Path.Combine("companies", "F8088E81-7EFA-4E49-F824-08D8C38D155C");
+			using (var response = await _httpClient.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead))
+			{
+				if(!response.IsSuccessStatusCode)
+				{
+					if (response.StatusCode.Equals(HttpStatusCode.NotFound))
+					{
+						Console.WriteLine("The company you are searching for couldn't be found.");
+						return;
+					}
+
+					response.EnsureSuccessStatusCode();
+				}
+
+				var stream = await response.Content.ReadAsStreamAsync();
+
+				var companies = await JsonSerializer.DeserializeAsync<List<CompanyDto>>(stream, _options);
+			}
 		}
 	}
 }

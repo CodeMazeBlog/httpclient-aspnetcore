@@ -31,7 +31,7 @@ namespace CompanyEmployees.Client
 			//services.AddScoped<IHttpClientServiceImplementation, HttpClientCrudService>();
 			//services.AddScoped<IHttpClientServiceImplementation, HttpClientPatchService>();
 			services.AddScoped<IHttpClientServiceImplementation, HttpClientStreamService>();
-
+			//services.AddScoped<IHttpClientServiceImplementation, HttpClientCancellationService>();
 		}
 	}
 }
