@@ -1,3 +1,3 @@
-# Using Streams with HttpClient to Improve Performance and Memory Usage
-## https://code-maze.com/using-streams-with-httpclient-to-improve-performance-and-memory-usage
-This repo contains the source code for the "Using Streams with HttpClient to Improve Performance and Memory Usage" article on Code Maze
+# Canceling HTTP Requests in ASP.NET Core with CancellationToken
+## https://code-maze.com/canceling-http-requests-in-asp-net-core-with-cancellationtoken
+This repo contains the source code for the "Canceling HTTP Requests in ASP.NET Core with CancellationToken" article on Code Maze
